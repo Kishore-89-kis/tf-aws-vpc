@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-resource "aws_vpc" "main "{
-    cidr_block = var.vpc_cidr
-    enable_dns_hostnames= 
-    enable_tenancy = "default"
-
-}
-=======
-
 
 resource "aws_vpc" "main" {
   cidr_block = var.vpc_cidr
@@ -23,7 +14,6 @@ tags = merge (
 resource "aws_internet_gateway" "main" {
   vpc_id = aws_vpc.main.id
   
-
   tags = merge (
     var.common_tags,
     var.igw_tags,
@@ -179,4 +169,3 @@ resource "aws_route_table_association" "database" {
 # cidr_block = var.database_subnet_cidrs [count.index]
  
 
->>>>>>> 57706bb (terraform)

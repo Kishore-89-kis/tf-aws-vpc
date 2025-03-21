@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-variable "vpc_cidr" {
- 
-}
-=======
 
 variable "vpc_cidr" {
  
@@ -100,4 +95,3 @@ variable "database_route_table_tags" {
         default = {}
     }
 
->>>>>>> 57706bb (terraform)
